@@ -170,9 +170,9 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                         children: <Widget>[
 //                          SizedBox(width: 16,),
                           _heading('Superficie Corporal'),
-                          SizedBox(width: 6,),
+                          SizedBox(width: 3,),
                           _displayresult(sc.toString()),
-                          Text('\tm²',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                          Text(' m²',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
 
                         ],
                       ),
@@ -186,7 +186,7 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                           _heading('Volemia'),
                           SizedBox(width: 25,),
                           _displayresult(ebv.toStringAsFixed(1)),
-                          Text('\t\tml',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                          Text('\t\tml',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                         ],
                       ),
                       SizedBox(
@@ -204,7 +204,7 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                             width: 25,
                           ),
                           _displayresult(bmi.toString()),
-                          Text('\t\tkg/m²',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                          Text('\t\tkg/m²',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                         ],
                       ),SizedBox(
                         height: 15,
@@ -218,16 +218,16 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                               borderRadius: BorderRadius.all(Radius.circular(5)),
                               color: Colors.blue[900],
                             ),
-                            padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                            padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
                             child: Text(
                               'Cristaloide para el Cebado',
                               textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 20, color: Colors.white),
+                              style: TextStyle(fontSize: 17, color: Colors.white),
                             ),
                           ),
 //                          SizedBox(width: 16,),
 //                          _heading('Cristaloide para el Cebado'),
-                          SizedBox(width: 8,),
+                          SizedBox(width: 4,),
                           _displayresult(cpec.toStringAsFixed(1)),
                           Text(' ml',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                         ],
@@ -274,8 +274,9 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                         height: 15,
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                        padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                         child: Column(
+
                           children: <Widget>[
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -285,20 +286,19 @@ class _CalculatorNextInputState extends State<CalculatorNextInput> {
                                     borderRadius: BorderRadius.all(Radius.circular(5)),
                                     color: Colors.blue[600],
                                   ),
-                                  padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+                                  padding: EdgeInsets.fromLTRB(2, 2, 2, 2),
                                   child: Text(
                                     'Índice Cardíaco',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 20, color: Colors.white),
                                   ),
                                 ),
-                                SizedBox(width: 10,),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(Radius.circular(5)),
                                     color: Colors.blue[600],
                                   ),
-                                  padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+                                  padding: EdgeInsets.fromLTRB(2, 2, 2,2),
                                   child: Text(
                                     'Gasto Cardíaco',
                                     textAlign: TextAlign.center,
@@ -660,10 +660,10 @@ Widget _heading(String text) {
       borderRadius: BorderRadius.all(Radius.circular(5)),
       color: Colors.blue[900],
     ),
-    padding: EdgeInsets.fromLTRB(35, 0, 35, 0),
+    padding: EdgeInsets.fromLTRB(23, 0, 23, 0),
     child: Text(
       text,
-      style: TextStyle(fontSize: 20, color: Colors.white),
+      style: TextStyle(fontSize: 18, color: Colors.white),
     ),
   );
 }
@@ -674,10 +674,10 @@ Widget _headingIC(String text) {
       borderRadius: BorderRadius.all(Radius.circular(5)),
       color: Colors.grey,
     ),
-    padding: EdgeInsets.fromLTRB(35, 0, 35, 0),
+    padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
     child: Text(
       text,
-      style: TextStyle(fontSize: 20, color: Colors.white),
+      style: TextStyle(fontSize: 18, color: Colors.white),
     ),
   );
 }

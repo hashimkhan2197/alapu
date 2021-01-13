@@ -160,11 +160,11 @@ class _CalculatorInputState extends State<CalculatorInput> {
                             ///Change from HTC to Hematocrito Inicial, so use values of HTC in formulas
                             _heading('Hematocrito Inicial '),
                             SizedBox(
-                              width: 16,
+                              width: 6,
                             ),
                             _input(controller: hematocritoInicialController),
                             Text(
-                              '\t\t%',
+                              ' %',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             )
@@ -179,11 +179,11 @@ class _CalculatorInputState extends State<CalculatorInput> {
                             ///Change from Volumen de Cebado to Hematocrito Deseado
                             _heading('Hematocrito Deseado'),
                             SizedBox(
-                              width: 12,
+                              width: 6,
                             ),
                             _input(controller: hematocritoDeseadoController),
                             Text(
-                              '\t\t%',
+                              ' %',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             )
