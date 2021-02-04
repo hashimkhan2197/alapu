@@ -151,41 +151,48 @@ class _ResultscreenState extends State<Resultscreen> {
     fmax = widget.fmax.toStringAsFixed(2);
     fmax = double.parse(fmax);
     print(fmax.toString());
+    //0-600
     if (fmax < 0.6) {
       tuberiaArterial = '3/16"';
       tuberiaVenosa = '3/16"';
       cabezalArterial = '1/4"';
     }
+    //600 - 1200
     if (fmax >= 0.6) {
       tuberiaArterial = '3/16"';
       tuberiaVenosa = '1/4"';
       cabezalArterial = '1/4"';
     }
+    //1200-1800
     if (fmax >= 1.2) {
+      tuberiaArterial = '1/4"';
+      tuberiaVenosa = '1/4"';
+      cabezalArterial = '1/4"';
+    }
+    //1800-2100
+    if (fmax >= 1.8) {
       tuberiaArterial = '1/4"';
       tuberiaVenosa = '3/8"';
       cabezalArterial = '1/4"';
     }
-    if (fmax >= 2.0) {
+    //2100-3150
+    if (fmax >= 2.1) {
+      tuberiaArterial = '1/4"';
+      tuberiaVenosa = '3/8"';
+      cabezalArterial = '3/8"';
+    }
+    //3150-3600
+    if (fmax >= 3.15) {
       tuberiaArterial = '3/8"';
       tuberiaVenosa = '3/8"';
       cabezalArterial = '3/8"';
     }
-    if (fmax >= 3.5) {
+    //3600-6000
+    if (fmax >= 3.6) {
       tuberiaArterial = '3/8"';
       tuberiaVenosa = '1/2"';
       cabezalArterial = '1/2"';
     }
-//    if (fmax >= 1.2) {
-//      tuberiaArterial = '3/8"';
-//      tuberiaVenosa = '3/8"';
-//      cabezalArterial = '1/2"';
-//    }
-//    if (fmax >= 1.3) {
-//      tuberiaArterial = '3/8"';
-//      tuberiaVenosa = '1/2"';
-//      cabezalArterial = '1/2"';
-//    }
     //-----------------------
     //Calculas de Drogas Section
     dosisDeHeparina = widget.peso * dosisDeHeparinaDropValue * 100;

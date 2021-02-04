@@ -112,7 +112,7 @@ class _MyProfileState extends State<MyProfile> {
                                           snapshot.data['nombre'],
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 24,
+                                            fontSize: 22,
                                           ),
                                         ),
                                         Text(

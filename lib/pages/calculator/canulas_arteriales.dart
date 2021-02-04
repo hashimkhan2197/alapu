@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CanulasArteriales extends StatefulWidget {
@@ -76,68 +77,111 @@ class _CanulasArterialesState extends State<CanulasArteriales> {
                 ),
               ),
             ),
-            _tabledata('Medidas','FMáx','    ',  Colors.blue[500],
-                Colors.blue[500]),
+
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //border: Border.all(color: Colors.black),
+                      color: Colors.blue[400],
+                    ),
+                    height: 55,
+                    child: Center(
+                      child: Text(
+                        'Medidas',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //border: Border.all(color: Colors.black),
+                      color: Colors.blue[600],
+                    ),
+                    height: 55,
+                    child: Center(
+                      child: Text(
+                        "FMáx",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+              ],
+            ),
             _tabledata(
                 ' 6 Fr',
                 ' - ',
                 '< 300 ml',
-                Colors.grey[400],
-                 Colors.grey[200]),
+                fmax < 0.3 ? Colors.red : Colors.grey[400],
+                fmax < 0.3 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 8 Fr',
                 '< 800 ml ',
                 '< 500 ml',
-                fmax <= 0.8 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 0.3 && fmax <= 0.5 ? Colors.red : Colors.grey[400],
+                fmax > 0.3 && fmax <= 0.5 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 10 Fr',
                 '< 1250 ml ',
                 '< 1100 ml',
-                fmax > 0.8 && fmax <= 1.25 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 0.5 && fmax <= 1.1 ? Colors.red : Colors.grey[400],
+                fmax > 0.5 && fmax <= 1.1 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 12 Fr',
                 '< 2400 ml ',
                 '< 1800 ml',
-                fmax > 1.25 && fmax <= 2.4 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 1.1 && fmax <= 1.8 ? Colors.red : Colors.grey[400],
+                fmax > 1.1 && fmax <= 1.8 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 14 Fr',
                 '< 3700 ml ',
                 '< 2500 ml',
-                fmax > 2.4 && fmax <= 3.7 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 1.8 && fmax <= 2.5 ? Colors.red : Colors.grey[400],
+                fmax > 1.8 && fmax <= 2.5 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 16 Fr',
                 '< 4500 ml ',
                 '< 3200 ml',
-                fmax > 3.7 && fmax <= 4.5 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 2.5 && fmax <= 3.2 ? Colors.red : Colors.grey[400],
+                fmax > 2.5 && fmax <= 3.2 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 18 Fr',
                 '< 5500 ml ',
-                '< 3200 ml',
-                fmax > 4.5 && fmax <= 5.5 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                '< 3700 ml',
+                fmax > 3.2 && fmax <= 3.7 ? Colors.red : Colors.grey[400],
+                fmax > 3.2 && fmax <= 3.7 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 20 Fr',
                 '< 6000 ml ',
                 '< 4700 ml',
-                fmax > 5.5 && fmax <= 6.0 ? Colors.red : Colors.grey[400],
-                 Colors.grey[200]),
+                fmax > 3.7 && fmax <= 4.7 ? Colors.red : Colors.grey[400],
+                fmax > 3.7 && fmax <= 4.7 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 22 Fr',
                 '> 6000 ml ',
                 '< 5800 ml',
-                fmax > 6.0 ? Colors.red : Colors.grey[400],
-                Colors.grey[200]),
+                fmax > 4.7 && fmax <= 5.8 ? Colors.red : Colors.grey[400],
+                fmax > 4.7 && fmax <= 5.8 ? Colors.red : Colors.grey[200]),
             _tabledata(
                 ' 24 Fr',
                 '> 6000 ml ',
                 '< 7000 ml',
-                fmax > 6.0 ? Colors.red : Colors.grey[400],
-                Colors.grey[200]),
+                fmax > 5.8 ? Colors.red : Colors.grey[400],
+                fmax > 5.8 ? Colors.red : Colors.grey[200]),
             Row(
               children: [
                 Expanded(
@@ -236,7 +280,7 @@ Widget _tabledata(String tr1, String tr2,String tr3, Color color1, Color color2)
           height: 50,
           child: Center(
             child: Text(
-              tr2,
+              tr3,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,
@@ -255,7 +299,7 @@ Widget _tabledata(String tr1, String tr2,String tr3, Color color1, Color color2)
           height: 50,
           child: Center(
             child: Text(
-              tr3,
+              tr2,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,

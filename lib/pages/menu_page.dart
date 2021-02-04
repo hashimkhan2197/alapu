@@ -8,6 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Menu extends StatefulWidget {
   @override
@@ -123,13 +124,13 @@ class _MenuState extends State<Menu> {
                                                 snapshot.data['nombre'],
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 24,
+                                                  fontSize: 22,
                                                 ),
                                               ),
                                               Text(
                                                 'Membresía # ' +
                                                     snapshot.data['memberSince'],
-                                                style: TextStyle(fontSize: 18),
+                                                style: TextStyle(fontSize: 16),
                                               ),
                                             ],
                                           ),
@@ -200,8 +201,51 @@ class _MenuState extends State<Menu> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceAround,
                                               children: <Widget>[
-                                                menuIcon('assets/youtube.png',
-                                                    'Youtube', '', context),
+                                                InkWell(
+                                                  onTap: () async{
+                                                    const url = 'https://youtube.com/c/Asociaci%C3%B3nLatinoamericanadePerfusi%C3%B3nALAP';
+                                                    if (await canLaunch(url)) {
+                                                    await launch(url,enableJavaScript: true,);
+                                                    } else {
+                                                      showDialog(
+                                                          context: context,
+                                                          child: AlertDialog(
+                                                            shape: RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                new BorderRadius.circular(18.0),
+                                                                side: BorderSide(
+                                                                  color: Colors.red[400],
+                                                                )),
+                                                            title: Text("YouTube"),
+                                                            content: Text("No se puede iniciar YouTube en este momento. Inténtelo más tarde."),
+                                                            actions: <Widget>[
+                                                              FlatButton(
+                                                                child: Text(
+                                                                  "OK",
+                                                                  style: TextStyle(color: Colors.red[400]),
+                                                                ),
+                                                                onPressed: () {
+                                                                  Navigator.pop(context);
+                                                                },
+                                                              )
+                                                            ],
+                                                          ));
+                                                    }
+                                                  },
+                                                  child: Column(
+                                                    children: <Widget>[
+                                                      CircleAvatar(
+                                                        backgroundImage: AssetImage('assets/youtube.png'),
+                                                        backgroundColor: Colors.white,
+                                                        radius: 50,
+                                                      ),
+                                                      SizedBox(
+                                                        height: 10,
+                                                      ),
+                                                      Text('Youtube'),
+                                                    ],
+                                                  ),
+                                                )
                                               ],
                                             ),
                                             SizedBox(
@@ -267,8 +311,44 @@ class _MenuState extends State<Menu> {
                           Divider(
                             color: Colors.grey,
                           ),
-                          drawerData(
-                              'assets/youtube.png', 'Youtube', '', context),
+                          ListTile(
+                            leading: CircleAvatar(
+                              radius: 30,
+                              backgroundImage: AssetImage('assets/youtube.png'),
+                              backgroundColor: Colors.white,
+                            ),
+                            title: Text('Youtube'),
+                            onTap: () async{
+                              const url = 'https://youtube.com/c/Asociaci%C3%B3nLatinoamericanadePerfusi%C3%B3nALAP';
+                              if (await canLaunch(url)) {
+                                await launch(url,enableJavaScript: true,);
+                              } else {
+                                showDialog(
+                                    context: context,
+                                    child: AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                          new BorderRadius.circular(18.0),
+                                          side: BorderSide(
+                                            color: Colors.red[400],
+                                          )),
+                                      title: Text("YouTube"),
+                                      content: Text("No se puede iniciar YouTube en este momento. Inténtelo más tarde."),
+                                      actions: <Widget>[
+                                        FlatButton(
+                                          child: Text(
+                                            "OK",
+                                            style: TextStyle(color: Colors.red[400]),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                        )
+                                      ],
+                                    ));
+                              }
+                            },
+                          ),
                           Divider(
                             color: Colors.grey,
                           ),

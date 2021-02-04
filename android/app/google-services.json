@@ -8,67 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1069583127460:android:3e2f5e600f018921712731",
+        "mobilesdk_app_id": "1:1069583127460:android:f7d20f260162717e712731",
         "android_client_info": {
-          "package_name": "com.org.alap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1069583127460-4uj621eh7pv7bv6obtd6641svic0co16.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA_o1-X_JuXXZj9MT_2AtTTVchtZ8nh4Do"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1069583127460-4uj621eh7pv7bv6obtd6641svic0co16.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1069583127460:android:92da9ecbc1de17cc712731",
-        "android_client_info": {
-          "package_name": "com.org.alapadmin"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1069583127460-4uj621eh7pv7bv6obtd6641svic0co16.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA_o1-X_JuXXZj9MT_2AtTTVchtZ8nh4Do"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1069583127460-4uj621eh7pv7bv6obtd6641svic0co16.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1069583127460:android:e04f24f35dc7f9a0712731",
-        "android_client_info": {
-          "package_name": "com.org.alapu"
+          "package_name": "com.org.alapbaba"
         }
       },
       "oauth_client": [
